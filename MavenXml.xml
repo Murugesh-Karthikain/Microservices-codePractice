@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+   
+  <localRepository>${user.home}/.m2/repository</localRepository>
+  <interactiveMode>true</interactiveMode>
+  <usePluginRegistry>false</usePluginRegistry>
+  <offline>false</offline>
+ 
+  
+ 
+ 
+  <profiles>
+    <profile>
+      <id>test</id>
+     
+       
+      <repositories>
+        <repository>
+          <id>codehausSnapshots</id>
+          <name>Codehaus Snapshots</name>
+          <releases>
+            <enabled>false</enabled>
+            <updatePolicy>always</updatePolicy>
+            <checksumPolicy>warn</checksumPolicy>
+          </releases>
+          <snapshots>
+            <enabled>true</enabled>
+            <updatePolicy>never</updatePolicy>
+            <checksumPolicy>fail</checksumPolicy>
+          </snapshots>
+          <url>https://repo.maven.apache.org/maven2</url>
+          <layout>default</layout>
+        </repository>
+      </repositories>
+       
+     
+    </profile>
+  </profiles>
+ 
+  <proxies>
+    <proxy>
+      <id>myproxy</id>
+      <active>true</active>
+      <protocol>http</protocol>
+      <username>609608@cognizant.com</username>  <!-- Put your username here -->
+      <password>Cogjan@2021</password>  <!-- Put your password here -->
+      <host>proxy.cognizant.com</host>   <!-- Put the IP address of your proxy server here -->
+      <port>6050</port>            <!-- Put your proxy server's port number here -->
+
+    </proxy>    
+  </proxies> 
+ 
+</settings>
